@@ -1,0 +1,34 @@
+to install Django on your machine you need to run this simple steps:
+
+mkdir ~/src
+
+cd ~/src
+
+wget http://www.djangoproject.com/download/1.3.1/tarball/ -O django.tar
+
+tar xvf django.tar
+
+cd Django-1.3.1
+
+python setup.py install --home=~
+
+Since we are installing into a non-standard location we will need to set the PYTHONPATH env variable:
+
+export PYTHONPATH=$HOME/lib/python
+
+export PATH=$HOME/bin:$PATH
+
+Now verify that Django is installed and the right version is in your path:
+
+python
+
+>>> import django
+
+>>> print django.get_version()
+1.3.1
+
+and there you go, you have successfully installed Django on your computer.
+
+to start a new project simply type
+
+django-admin.py startproject 'name of the project without quotation marks ('')'
